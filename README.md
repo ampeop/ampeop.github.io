@@ -54,4 +54,8 @@ For demos, partnerships, or questions, request a demo or email hello@insightonin
 
 ---
 
+## Changelog
+
+- 2026-07-28 — Replaced HTML homepage with a focused product README describing Insight On Investments. (commit 98a5c80)
+
 © Insight On Investments — Practical signals, clearly explained.
