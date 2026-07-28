@@ -1,6 +1,6 @@
 # ampeop.github.io
 A new way to explore the Stock Brokerage in live time while learning how to invest without the risk of losing your own cash!
-<!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -24,7 +24,8 @@ A new way to explore the Stock Brokerage in live time while learning how to inve
     .container{ max-width:var(--max-w); margin:0 auto; padding:28px; }
     /* Hero */
     .hero{
-      background-image: linear-gradient(rgba(4,7,13,0.42), rgba(4,7,13,0.42)), url('https://picsum.photos/id/1011/1600/900');
+      background-image: linear-gradient(rgba(4,7,13,0.42), rgba(4,7,13,0.42)), url(https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.magnific.com%2Ffree-photos-vectors%2Fcrypto&ved=0CBYQjRxqFwoTCOiK_fT29ZUDFQAAAAAdAAAAABA3&opi=89978449)<img width="740" height="493" alt="image" src="https://github.com/user-attachments/assets/160d22d5-1345-4a84-a099-ca9b72b4653e" />
+');
       background-size:cover; background-position:center;
       color:#fff; border-radius:16px; padding:48px; display:grid; grid-template-columns:1fr 360px; gap:24px; align-items:center;
     }
@@ -62,7 +63,7 @@ A new way to explore the Stock Brokerage in live time while learning how to inve
     /* Responsive */
     @media (max-width:900px){ .hero{ grid-template-columns:1fr; padding:28px; } .card{ margin-top:8px; } }
     /* small helpers */
-    .muted{ color:var(--muted); font-size:13px; }
+    .muted{ color:var(--muted); font-size:18px; }
     .pill{ background:#eef6f7; color:#07575b; padding:6px 8px; border-radius:999px; font-weight:600; font-size:13px; }
   </style>
 </head>
