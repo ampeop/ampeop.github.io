@@ -1,2 +1,104 @@
 # ampeop.github.io
 A new way to explore the Stock Brokerage in live time while learning how to invest without the risk of losing your own cash!
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PaperTrade+ — Learn Stocks, ETFs & Crypto</title>
+  <meta name="description" content="Learn to read charts, build diversified portfolios, and practice with simulated trades before investing real money.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0ea5a4;
+      --accent-2:#06b6d4;
+      --muted:#64748b;
+      --bg:#0b1220;
+      --card-bg:#ffffff;
+      --radius:12px;
+      --max-w:1100px;
+    }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color:#0b1220; background:#f7fbfd; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    a{ color:var(--accent); text-decoration:none; }
+    .container{ max-width:var(--max-w); margin:0 auto; padding:28px; }
+    /* Hero */
+    .hero{
+      background-image: linear-gradient(rgba(4,7,13,0.42), rgba(4,7,13,0.42)), url('https://picsum.photos/id/1011/1600/900');
+      background-size:cover; background-position:center;
+      color:#fff; border-radius:16px; padding:48px; display:grid; grid-template-columns:1fr 360px; gap:24px; align-items:center;
+    }
+    .kicker{ text-transform:uppercase; font-size:12px; opacity:.9; letter-spacing:.16em; color:rgba(255,255,255,.85); }
+    h1{ font-size:clamp(26px,4vw,42px); margin:8px 0 10px; line-height:1.02; font-weight:800; }
+    p.lead{ margin:0 0 18px; color:rgba(235,245,255,.95); max-width:48ch; }
+    .cta-row{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .btn-primary{ background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#022; padding:12px 16px; border-radius:10px; font-weight:700; box-shadow:0 10px 30px rgba(6,11,18,0.35); border:none; cursor:pointer; }
+    .btn-ghost{ background:rgba(255,255,255,0.08); color:#e6fbff; padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.06); cursor:pointer; }
+    /* Right card: preview */
+    .card{ background:rgba(255,255,255,0.06); padding:14px; border-radius:12px; backdrop-filter: blur(6px); }
+    .preview-title{ font-weight:600; font-size:14px; color:#eaffff; margin:8px 0 6px; }
+    .preview-sub{ font-size:13px; color:rgba(235,245,255,0.9); margin:0; }
+    /* Features */
+    .features{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:22px; }
+    .feature{ background:var(--card-bg); border-radius:12px; padding:16px; box-shadow:0 8px 24px rgba(12,20,40,.06); }
+    .feature img{ width:56px; height:56px; border-radius:8px; object-fit:cover; }
+    .feature h3{ margin:10px 0 6px; font-size:16px; }
+    .feature p{ margin:0; color:var(--muted); font-size:14px; }
+    /* How it works */
+    .how{ display:flex; gap:16px; flex-wrap:wrap; margin-top:20px; }
+    .step{ flex:1 1 220px; background:#fff; border-radius:12px; padding:16px; box-shadow:0 8px 24px rgba(12,20,40,.04); }
+    .step h4{ margin:0 0 8px; font-size:15px; }
+    .step p{ margin:0; color:var(--muted); font-size:14px; }
+    /* Chart preview */
+    .chart-card{ background:#fff; border-radius:12px; padding:12px; box-shadow:0 12px 40px rgba(2,6,23,.06); }
+    .chart-toolbar{ display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:8px; }
+    .toggle{ background:#eef6f7; border-radius:8px; padding:6px 8px; font-size:13px; cursor:pointer; border:none; color:#07575b; }
+    /* Gallery */
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-top:16px; }
+    .thumb{ border-radius:8px; overflow:hidden; background:#fff; cursor:pointer; box-shadow:0 6px 20px rgba(2,6,23,.04); }
+    .thumb img{ width:100%; height:120px; object-fit:cover; display:block; }
+    /* Footer/disclaimer */
+    .disclaimer{ margin-top:18px; font-size:13px; color:var(--muted); }
+    /* Responsive */
+    @media (max-width:900px){ .hero{ grid-template-columns:1fr; padding:28px; } .card{ margin-top:8px; } }
+    /* small helpers */
+    .muted{ color:var(--muted); font-size:13px; }
+    .pill{ background:#eef6f7; color:#07575b; padding:6px 8px; border-radius:999px; font-weight:600; font-size:13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="container">
+      <section class="hero" aria-label="Hero: Learn to invest with confidence">
+        <div>
+          <div class="kicker">Paper trading · Chart lessons · Portfolio builder</div>
+          <h1>Practice trading. Read charts like a pro. Build better portfolios.</h1>
+          <p class="lead">Simulate trades, learn chart patterns, and assemble diversified portfolios for stocks, ETFs, and crypto—without risking real money. Step-by-step lessons + practice workspace.</p>
+          <div class="cta-row">
+            <button class="btn-primary" onclick="document.getElementById('start').scrollIntoView({behavior:'smooth'})">Start the free course</button>
+            <a class="btn-ghost" href="#features" role="button">See features</a>
+          </div>
+          <p class="muted" style="margin-top:10px;"><span class="pill">Beginner-friendly</span> · No credit card · Educational use only</p>
+        </div>
+
+        <aside class="card" aria-hidden="false">
+          <div style="display:flex; gap:12px; align-items:center;">
+            <!-- small inline SVG candlestick preview to avoid external dependencies -->
+            <svg width="120" height="80" viewBox="0 0 120 80" aria-hidden="true" role="img" style="flex:0 0 120px;">
+              <rect width="120" height="80" rx="8" fill="rgba(255,255,255,0.04)"/>
+              <!-- sample candles -->
+              <g transform="translate(10,8)" stroke-width="1.8" stroke-linecap="round">
+                <line x1="8" y1="0" x2="8" y2="60" stroke="rgba(255,255,255,0.14)"/>
+                <rect x="0" y="20" width="16" height="14" fill="#06b6d4" rx="2"/>
+                <line x1="35" y1="0" x2="35" y2="60" stroke="rgba(255,255,255,0.14)"/>
+                <rect x="27" y="30" width="16" height="10" fill="#ef4444" rx="2"/>
+                <line x1="62" y1="0" x2="62" y2="60" stroke="rgba(255,255,255,0.14)"/>
+                <rect x="54" y="12" width="16" height="26" fill="#06b6d4" rx="2"/>
+              </g>
+            </svg>
+
+            <div style="flex:1;">
+              <div class="preview-title">Interactive Chart Lessons</div>
+              <p class="preview-sub">Hover over candles, toggle indicators, and learn pattern names step-by-step—then try the same setup in paper trades.</p>
+            </div>
+          </*
