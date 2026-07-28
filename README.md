@@ -28,7 +28,7 @@
       line-height:1.5;
     }
 
-    /* Background stock chart (brightened) */
+    /* Background stock chart with Crypto logos (brightened) */
     .bg {
       position:fixed;
       inset:0;
@@ -316,7 +316,7 @@
           </div>
 
           <div style="font-size:13px; color:#0a2e36;">
-            <strong>Colors & brand:</strong> blue for primary actions, green for confirmations and positive signal highlights, and neutral greys for structured, readable copy.
+          
           </div>
         </aside>
       </main>
