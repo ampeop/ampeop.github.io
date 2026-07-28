@@ -1,493 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Insight On Investments — Clear Market Intelligence</title>
-  <meta name="description" content="Actionable market intelligence with transparent reasoning. Trade and allocate with clarity, not guesswork.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --blue-600: #0b6cff;
-      --green-600: #1fb07b;
-      --grey-100: #f4f6f8;
-      --grey-700: #334155;
-      --glass: rgba(255, 255, 255, 0.92);
-      --card-border: rgba(16, 40, 60, 0.06);
-    }
+# Insight On Investments
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+Actionable market intelligence with transparent reasoning — clear signals, practical guidance, and reproducible trade ideas so you can make disciplined decisions with confidence.
 
-    html, body { height: 100%; }
+## Overview
 
-    body {
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color: var(--grey-700);
-      background: var(--grey-100);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.5;
-    }
+Insight On Investments transforms raw market data into prioritized, execution-ready insights. We combine real-time market feeds (price, volume, correlations), macro indicators, and news sentiment to surface signals that matter now — and explain why they matter.
 
-    .site-header {
-      position: relative;
-      width: 100%;
-      min-height: 220px;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-    }
+Each recommendation includes:
 
-    .header-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background-image: url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1600&auto=format&fit=crop");
-      background-size: cover;
-      background-position: center;
-      filter: contrast(1.05) saturate(1.05) brightness(0.92);
-    }
+- A concise rationale describing the pattern or trigger.
+- The data and rules that generated the signal (for reproducibility).
+- Practical execution guidance: suggested entry, stop, target, and position sizing.
+- A short historical example showing how similar setups behaved in past regimes.
 
-    .header-bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(11, 30, 50, 0.35), rgba(11, 30, 50, 0.65));
-    }
+We prioritize transparency and learning so users can trust, evaluate, and improve their decision-making over time.
 
-    .header-inner {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px 24px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
+## Key Features
 
-    .logo {
-      font-weight: 800;
-      font-size: 20px;
-      color: #fff;
-      letter-spacing: -0.4px;
-      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-    }
+- Customizable Alerts: Define precise triggers (technical patterns, relative strength thresholds, volatility shifts, macro conditions) and receive prioritized alerts via email, SMS, or in-app.
+- Signal Explanations: Each flag contains the metrics that drove it, a one-paragraph context summary, and suggested actions (entry, risk, exit).
+- Backtest & Scenario Tools: Fast backtests and scenario simulations to evaluate how strategies would have performed across bull, bear, and sideways markets.
+- Risk Management: Position-sizing recommendations, stop suggestions, and portfolio-level stress tests to quantify downside and reduce concentration risk.
+- Auditability & Transparency: View the exact rules, lookback windows, and historical outcomes behind every signal.
+- Learning Feed: Case studies and bite-sized lessons accompany signals so you can learn from patterns and outcomes.
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 44px;
-      height: 44px;
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(6px);
-      cursor: pointer;
-      z-index: 110;
-    }
+## How It Works (brief)
 
-    .hamburger span {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      transition: transform 0.25s ease, opacity 0.25s ease;
-    }
+1. Data ingestion: continuous feeds for market prices, volumes, correlations, macro indicators, and news sentiment.
+2. Signal detection: a mix of rule-based and statistical scanners run across your watchlists and the broader market.
+3. Context layering: add macro, sector, and recent-news context to filter and prioritize signals.
+4. Execution guidance: deliver clear entries, stops, targets, and sizing for practical implementation.
 
-    .hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.is-open span:nth-child(2) { opacity: 0; }
-    .hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+## Who Benefits
 
-    .nav-desktop {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+- Active traders seeking concise, timely signals.
+- Investors wanting market context before reallocating capital.
+- Advisors needing reproducible rules and clear rationales for client discussions.
 
-    .nav-desktop a,
-    .nav-mobile a {
-      font-weight: 600;
-      text-decoration: none;
-    }
+## Getting Started
 
-    .nav-desktop a {
-      padding: 8px 14px;
-      color: #fff;
-      border-radius: 8px;
-      transition: background 0.2s ease;
-    }
+1. Create a free account and add a watchlist.
+2. Set alert preferences and default risk/sizing rules.
+3. Receive your prioritized market briefing and first signals.
+4. Use the backtest and scenario tools to validate and iterate on ideas.
 
-    .nav-desktop a:hover { background: rgba(255, 255, 255, 0.15); }
+## Security & Privacy
 
-    .nav-mobile {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: min(280px, 85vw);
-      height: 100vh;
-      z-index: 100;
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      box-shadow: -8px 0 32px rgba(20, 40, 60, 0.18);
-      padding: 80px 24px 24px;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+User data and watchlists are private by default. We use secure APIs and encryption in transit. Enterprise customers can enable additional controls and audit logs.
 
-    .nav-mobile.is-open { transform: translateX(0); }
+## Contact
 
-    .nav-mobile a {
-      padding: 14px 16px;
-      color: var(--grey-700);
-      border-radius: 10px;
-    }
+For demos, partnerships, or questions, request a demo or email hello@insightoninvestments.example
 
-    .nav-mobile a:hover { background: rgba(11, 108, 255, 0.08); }
+---
 
-    .menu-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 99;
-      background: rgba(10, 20, 30, 0.45);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    .menu-overlay.is-open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .site {
-      display: flex;
-      justify-content: center;
-      padding: 32px 20px 48px;
-    }
-
-    .card {
-      width: 100%;
-      max-width: 1200px;
-      background: var(--glass);
-      border-radius: 14px;
-      padding: 36px;
-      box-shadow: 0 18px 40px rgba(20, 40, 60, 0.12);
-      border: 1px solid var(--card-border);
-      backdrop-filter: blur(6px);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .hero h1 {
-      font-size: clamp(30px, 4.6vw, 48px);
-      line-height: 1.03;
-      margin-bottom: 14px;
-      font-weight: 800;
-    }
-
-    .lead {
-      font-size: 18px;
-      color: #102233;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-
-    .deep-explain {
-      margin-top: 12px;
-      background: linear-gradient(180deg, rgba(11, 108, 255, 0.04), rgba(31, 176, 123, 0.02));
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid rgba(10, 20, 40, 0.03);
-    }
-
-    .deep-explain h3 {
-      margin-bottom: 10px;
-      font-size: 16px;
-      font-weight: 800;
-    }
-
-    .deep-explain p {
-      margin-bottom: 12px;
-      font-size: 15.5px;
-      color: #0f2a39;
-    }
-
-    .deep-explain ul {
-      margin: 0 0 12px 18px;
-    }
-
-    .deep-explain li { margin-bottom: 6px; }
-
-    .features {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .feature {
-      background: #fff;
-      padding: 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(8, 18, 30, 0.04);
-    }
-
-    .feature h3 {
-      font-size: 15px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      color: #043243;
-    }
-
-    .feature p {
-      font-size: 14px;
-      color: #23414a;
-    }
-
-    .cta {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .glass {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 250, 250, 0.98));
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: 0 8px 18px rgba(10, 20, 30, 0.06);
-      border: 1px solid rgba(10, 20, 40, 0.03);
-    }
-
-    .cta h3 {
-      margin-bottom: 8px;
-      font-weight: 800;
-    }
-
-    .cta p { margin-bottom: 12px; color: #173344; }
-
-    .btn-row { margin-top: 10px; }
-
-    .btn {
-      display: inline-block;
-      background: linear-gradient(90deg, var(--blue-600), #1466f0);
-      color: #fff;
-      padding: 12px 16px;
-      border-radius: 10px;
-      font-weight: 800;
-      text-decoration: none;
-      box-shadow: 0 10px 26px rgba(11, 108, 255, 0.16);
-    }
-
-    .btn-outline {
-      display: inline-block;
-      border: 2px solid var(--green-600);
-      color: var(--green-600);
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .long-rows {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .panel {
-      background: #fff;
-      padding: 16px;
-      border-radius: 10px;
-      border: 1px solid rgba(8, 18, 30, 0.04);
-    }
-
-    .panel h4 {
-      font-size: 15px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      color: #0a2a36;
-    }
-
-    .panel p {
-      font-size: 14px;
-      color: #243f49;
-      margin-bottom: 8px;
-    }
-
-    footer {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 13px;
-      color: #253a44;
-      opacity: 0.7;
-    }
-
-    @media (max-width: 1000px) {
-      .hero,
-      .long-rows { grid-template-columns: 1fr; }
-      .hamburger { display: flex; }
-      .nav-desktop { display: none; }
-      .site-header { min-height: 180px; }
-    }
-  </style>
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="header-bg" aria-hidden="true"></div>
-    <div class="header-inner">
-      <div class="logo">Insight On Investments</div>
-      <nav class="nav-desktop" aria-label="Main navigation">
-        <a href="#how">How it helps</a>
-        <a href="#features">Features</a>
-        <a href="#start">Get Started</a>
-      </nav>
-      <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
-  <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
-    <a href="#how">How it helps</a>
-    <a href="#features">Features</a>
-    <a href="#start">Get Started</a>
-  </nav>
-
-  <div class="site">
-    <div class="card">
-      <main class="hero">
-        <section>
-          <h1>Actionable market intelligence with transparent reasoning. Trade and allocate with clarity, not guesswork.</h1>
-          <p class="lead">
-            Insight On Investments turns complex market behavior into clear guidance — combining automated signals, contextual analysis, and practical recommendations so you can make disciplined, repeatable decisions.
-          </p>
-
-          <div class="deep-explain" id="how">
-            <h3>How Insight On Investments helps you</h3>
-            <p>
-              Markets produce an enormous volume of information every second: price ticks, volume flows, sector rotations, macro surprises and news sentiment. Our platform ingests those streams, filters noise, and surfaces the patterns that matter for your objectives. We prioritize clarity: every signal is accompanied by a plain-English explanation, the data that produced it, and a concrete next step so you're not left guessing.
-            </p>
-            <p>We break value into three practical pillars:</p>
-            <ul>
-              <li><strong>Signal detection:</strong> Real-time scanning for technical setups, volatility shifts, volume surges and correlation breakouts tailored to your watchlists.</li>
-              <li><strong>Contextual analysis:</strong> We layer macro environment, sector health, and recent news to explain whether a signal is likely to matter in the near term.</li>
-              <li><strong>Execution-ready guidance:</strong> Position size suggestions, clear stop and target levels, and example trade entries so you can act consistently.</li>
-            </ul>
-            <p>
-              We also provide learning moments: each recommendation includes a short rationale and a historical example that shows how similar setups behaved across different market regimes. This helps you understand not only "what" to do, but "why" and "when" to adjust.
-            </p>
-            <p>
-              Whether you're an active trader, a part-time investor, or an advisor managing client portfolios, Insight On Investments is designed to support disciplined, repeatable decision-making with transparency and practical tools.
-            </p>
-          </div>
-
-          <div class="features" id="features">
-            <div class="feature">
-              <h3>Customizable Alerts</h3>
-              <p>Define the exact triggers that matter to you — technical patterns, relative strength thresholds, or macro conditions — and receive prioritized, succinct alerts across email, SMS, or app push.</p>
-            </div>
-            <div class="feature">
-              <h3>Signal Explanations</h3>
-              <p>Every flag includes a short summary, the data that triggered it, a historical context paragraph, and suggested actions (entry, risk, and exit).</p>
-            </div>
-            <div class="feature">
-              <h3>Backtest &amp; Scenario Tools</h3>
-              <p>Quick backtests and scenario analysis let you see how a strategy would have behaved in past bull, bear and sideways markets — with easy-to-read metrics and visual summaries.</p>
-            </div>
-            <div class="feature">
-              <h3>Risk Management</h3>
-              <p>Built-in sizing guidance, stop suggestions, and portfolio-level stress tests to quantify downside and avoid concentration risk.</p>
-            </div>
-          </div>
-
-          <div class="long-rows">
-            <div class="panel">
-              <h4>Who benefits most</h4>
-              <p>Active traders who need concise, timely signals; investors who want market context before reallocating; advisors seeking reproducible rules for client portfolios.</p>
-              <p>Our tools are optimized for people who prefer clear, action-focused recommendations — not opaque scores or raw data dumps.</p>
-            </div>
-            <div class="panel">
-              <h4>Examples &amp; Evidence</h4>
-              <p>For each signal we provide a one-paragraph case study showing a prior occurrence, what followed, and a performance snapshot. This helps you calibrate expectations and understand edge &amp; drawdown.</p>
-              <p>We emphasize transparency: see the exact rules used for a signal, the lookback windows, and the historical outcomes by regime.</p>
-            </div>
-          </div>
-        </section>
-
-        <aside class="cta" id="start">
-          <div class="glass">
-            <h3>Start with a prioritized market summary</h3>
-            <p>
-              Create a free account, add a watchlist, and receive a tailored market briefing within minutes — the top opportunities, the most urgent risks, and a succinct plan you can act on.
-            </p>
-            <a class="btn" href="#start">Create free account</a>
-            <div class="btn-row">
-              <a class="btn-outline" href="#how">Request demo</a>
-            </div>
-          </div>
-        </aside>
-      </main>
-
-      <footer>
-        © <strong>Insight On Investments</strong> — Practical signals, clearly explained.
-      </footer>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      var btn = document.getElementById('hamburgerBtn');
-      var menu = document.getElementById('mobileMenu');
-      var overlay = document.getElementById('menuOverlay');
-      if (!btn || !menu || !overlay) return;
-
-      function closeMenu() {
-        btn.classList.remove('is-open');
-        menu.classList.remove('is-open');
-        overlay.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute('aria-label', 'Open menu');
-        document.body.style.overflow = '';
-      }
-
-      function openMenu() {
-        btn.classList.add('is-open');
-        menu.classList.add('is-open');
-        overlay.classList.add('is-open');
-        btn.setAttribute('aria-expanded', 'true');
-        btn.setAttribute('aria-label', 'Close menu');
-        document.body.style.overflow = 'hidden';
-      }
-
-      btn.addEventListener('click', function () {
-        menu.classList.contains('is-open') ? closeMenu() : openMenu();
-      });
-
-      overlay.addEventListener('click', closeMenu);
-      menu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', closeMenu);
-      });
-    })();
-  </script>
-
-</body>
-</html>
+© Insight On Investments — Practical signals, clearly explained.
